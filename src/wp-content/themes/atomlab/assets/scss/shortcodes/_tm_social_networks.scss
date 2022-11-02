@@ -1,0 +1,70 @@
+.tm-social-networks {
+	@extend %clearfix;
+	padding: 0;
+	margin: 0 -8px;
+	
+	.item {
+		list-style-type: none;
+	}
+	
+	.link {
+		padding: 5px 8px;
+	}
+	
+	&.layout-list {
+		display: block;
+	}
+	
+	&.layout-inline {
+		.item {
+			display: inline-block;
+		}
+	}
+	
+	&.layout-two-columns {
+		margin: 0 -10px;
+		
+		.item {
+			display: block;
+			float: left;
+			width: 50%;
+		}
+		
+		.link {
+			padding: 5px 10px;
+		}
+	}
+	
+	&.style-icons {
+		font-size: 16px;
+	}
+	
+	&.style-icon-title {
+		.link-icon {
+			font-size: 14px;
+			margin-right: 10px;
+		}
+	}
+	
+	&.style-title {
+		margin: 0 -13px;
+		
+		.link {
+			padding: 5px 13px;
+		}
+		
+		.link-text {
+			font-size: 16px;
+			font-weight: 700;
+		}
+	}
+	
+	.link {
+		display: inline-block;
+	}
+	
+	// fix wp 4.7 widget
+	br {
+		display: none;
+	}
+}

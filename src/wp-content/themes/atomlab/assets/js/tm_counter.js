@@ -1,0 +1,30 @@
+jQuery( document ).ready( function( $ ) {
+	'use strict';
+
+	$( '.tm-counter' ).each( function() {
+		var $numbers = $( this ).find( '.number' );
+
+		var animation = $( this ).data( 'animation' ) ? $( this ).data( 'animation' ) : 'counterUp';
+
+		if ( animation === 'odometer' ) {
+			var _number = $numbers.html();
+			var od = new Odometer( {
+				el: $numbers[ 0 ],
+				value: 0
+			} );
+			od.render();
+
+			$( this ).vcwaypoint( function() {
+				od.update( _number );
+				this.destroy();
+			}, {
+				offset: '90%'
+			} );
+		} else {
+			$numbers.counterUp( {
+				delay: 10,
+				time: 1000
+			} );
+		}
+	} );
+} );

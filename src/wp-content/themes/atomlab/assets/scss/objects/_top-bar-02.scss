@@ -1,0 +1,18 @@
+.top-bar-02 {
+	
+	.row{
+		min-height: 50px;
+	}
+	
+	.info-text {
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-weight: 500;
+	}
+}
+
+@include media-breakpoint-down(md) {
+	.top-bar-02 {
+		display: none;
+	}
+}

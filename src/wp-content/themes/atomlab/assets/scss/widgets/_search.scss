@@ -1,0 +1,37 @@
+.widget_search,
+.widget_product_search {
+	form {
+		position: relative;
+	}
+	
+	.search-field {
+		width: 100%;
+		padding-right: 20px;
+		font-size: 14px;
+	}
+	
+	.search-submit {
+		position: absolute;
+		top: 50%;
+		right: 20px;
+		transform: translate(0, -50%);
+		padding: 0;
+		border: 0;
+		background: transparent;
+		color: #454545;
+	}
+	
+	.search-btn-text {
+		display: none;
+	}
+	
+	.search-btn-icon {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translate(0, -50%);
+		line-height: 1;
+		font-size: 24px;
+		font-weight: 500;
+	}
+}

@@ -1,0 +1,24 @@
+img.tm-lazy-load {
+	transition: all 1s;
+	width: 100%;
+	opacity: .5;
+	filter: blur(15px);
+	
+	&.loaded {
+		opacity: 1;
+		filter: blur(0);
+		width: auto;
+	}
+}
+
+.tm-lazy-load {
+	transition: all 1s;
+	/*opacity: .5;
+	filter: blur(15px);*/
+	
+	&[data-was-processed="true"] {
+		/*opacity: 1;
+		filter: blur(0);*/
+		-webkit-backface-visibility: hidden;
+	}
+}

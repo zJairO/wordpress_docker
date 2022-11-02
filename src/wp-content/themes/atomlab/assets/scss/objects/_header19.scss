@@ -1,0 +1,51 @@
+.header-19 {
+	.header-wrap {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	
+	.branding {
+		flex-grow: 1;
+	}
+	
+	.header-right {
+		flex-shrink: 0;
+	}
+	
+	.desktop-menu & {
+		.menu--primary {
+			position: static;
+			text-align: right;
+		}
+	}
+	
+	.header-right {
+		justify-self: flex-end;
+	}
+	
+	.mobile-menu & {
+		.branding {
+			flex-grow: 1;
+		}
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.header-19 {
+		.col-xs-12 {
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+	}
+}
+
+@media (min-width: 1420px) {
+	.header-19 {
+		.col-xs-12 {
+			padding-left: 100px;
+			padding-right: 100px;
+		}
+	}
+}

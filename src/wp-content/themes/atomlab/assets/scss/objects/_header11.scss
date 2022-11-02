@@ -1,0 +1,159 @@
+.header-11 {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	
+	.admin-bar & {
+		top: 32px;
+		
+		.header-fixed-section {
+			top: 132px;
+		}
+	}
+	
+	.header-fixed-section {
+		position: fixed;
+		top: 100px;
+		left: 0;
+		z-index: 1;
+		width: 340px;
+		height: 100%;
+		box-shadow: 0 -9px 25px rgba(0, 0, 0, .03);
+		
+		.page-sidebar {
+			padding: 60px 40px;
+			background: #ffffff;
+		}
+	}
+	
+	+ .page-content {
+		margin-top: 100px;
+	}
+	
+	.col-xs-12 {
+		padding: 0;
+	}
+	
+	.branding {
+		display: table;
+		width: 340px;
+		height: 100%;
+		background: #53abf3;
+		flex-shrink: 0;
+	}
+	
+	.branding__logo {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		height: 100%;
+		font-size: 0;
+		
+		a {
+			float: none;
+		}
+		
+		img {
+			margin: 0 auto;
+		}
+	}
+	
+	.header-wrap {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: stretch;
+	}
+	
+	.header-right-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		flex-grow: 1;
+		padding: 0 15px;
+	}
+	
+	.page-navigation {
+		flex-grow: 1;
+	}
+	
+	.desktop-menu & {
+		.menu--primary {
+			position: static;
+		}
+	}
+	
+	.header-left {
+		display: flex;
+		margin: 0 -12px;
+		align-items: center;
+		flex-shrink: 0;
+		
+		> div {
+			padding: 0 12px;
+		}
+	}
+	
+	.header-right {
+		justify-self: flex-end;
+	}
+	
+	.popup-search-wrap {
+		.search-field {
+			padding-left: 31px;
+			padding-right: 0;
+			border: 0;
+			background: none;
+			width: 160px;
+		}
+		
+		.search-submit {
+			right: auto;
+			left: 2px;
+			width: auto;
+			line-height: 0;
+		}
+	}
+	
+	.mobile-menu & {
+		.branding {
+			flex-grow: 1;
+		}
+	}
+	
+	.header-social-networks a {
+		font-size: 16px;
+	}
+}
+
+@media (min-width: 1400px) {
+	.header-11 {
+		.header-right-wrap {
+			padding: 0 50px;
+		}
+	}
+}
+
+@media (max-width: 1399px) {
+	.header-11 {
+		.desktop-menu & {
+			.menu--primary .menu__container > li > a {
+				padding-left: 10px !important;
+				padding-right: 10px !important;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-down(lg) {
+	.header-fixed-section {
+		display: none;
+	}
+	
+	.header-11 {
+		.header-left {
+			flex-grow: 1;
+		}
+	}
+}

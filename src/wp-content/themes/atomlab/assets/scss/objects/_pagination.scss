@@ -1,0 +1,165 @@
+.comment-nav-links,
+.page-pagination {
+	margin: -5px;
+	padding: 0;
+	color: #cccccc;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	li {
+		display: inline-block;
+		padding: 5px;
+		list-style-type: none;
+		
+		span,
+		a {
+			padding: 0 6px;
+			display: block;
+			text-align: center;
+			line-height: 38px;
+		}
+		
+		.dots {
+			border: 0;
+			background: none;
+			width: 20px;
+		}
+		
+		.next,
+		.prev {
+			border: 0;
+		}
+	}
+}
+
+.page-pagination {
+	margin-top: 30px;
+}
+
+.comment-nav-links {
+	ul {
+		padding: 0;
+	}
+}
+
+#comment-nav-above {
+	ul {
+		margin: 50px 0;
+	}
+}
+
+#comment-nav-below {
+	ul {
+		margin: 0 0 74px;
+	}
+}
+
+.page-links {
+	@extend %clearfix;
+	clear: both;
+	margin: 0 -6px;
+	padding-top: 30px;
+	
+	> span,
+	> a {
+		display: block;
+		float: left;
+		padding: 0 6px;
+		text-align: center;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 38px;
+	}
+	
+	> span {
+		padding: 0 12px;
+	}
+	
+	a {
+		span {
+			padding: 0 6px;
+		}
+	}
+	
+	> a:hover,
+	> a:focus,
+	> span {
+		color: #ffffff;
+	}
+}
+
+.post-navigation {
+	position: relative;
+}
+
+.return-blog-page {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 2px solid #ededed;
+	width: 48px;
+	height: 48px;
+	line-height: 46px;
+	text-align: center;
+	border-radius: 50%;
+	font-size: 24px;
+	cursor: pointer;
+	
+	&:hover {
+		font-size: 20px;
+	}
+}
+
+.nav-links {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-bottom: 30px;
+	border: 1px solid #ededed;
+	border-radius: 5px;
+	padding: 34px 30px;
+	
+	.nav-item {
+		width: 50%;
+	}
+	
+	.nav-previous {
+		text-align: left;
+		padding-right: 50px;
+		a {
+			padding-left: 25px;
+			&:after {
+				left: 0;
+				content: '\f3d2';
+			}
+		}
+	}
+	
+	.nav-next {
+		text-align: right;
+		padding-left: 50px;
+		justify-self: flex-end;
+		a {
+			padding-right: 25px;
+			&:after {
+				right: 0;
+				content: '\f3d3';
+			}
+		}
+	}
+	
+	a {
+		position: relative;
+		display: block;
+		font-size: 18px;
+		&:after {
+			position: absolute;
+			top: 50%;
+			font-family: 'Ionicons';
+			line-height: 10px;
+			transform: translate(0, -50%);
+		}
+	}
+}

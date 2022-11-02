@@ -1,0 +1,295 @@
+.widget {
+	+ .widget {
+		margin: 33px 0 0;
+	}
+}
+
+.widget-title,
+.widgettitle {
+	margin-bottom: 27px;
+	text-transform: capitalize;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 1.6;
+}
+
+.widget_text {
+	font-size: 16px;
+}
+
+.page-footer {
+	font-size: 16px;
+	line-height: 1.75;
+	
+	.widget-title,
+	.widgettitle {
+		margin-bottom: 27px;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 14px;
+		letter-spacing: .22em;
+	}
+}
+
+.page-sidebar {
+	.page-sidebar-inner {
+		height: 100%;
+	}
+}
+
+@media (max-width: 1199px) {
+	.wpb_widgetised_column {
+		padding: 0 !important;
+		.wpb_wrapper {
+			padding: 50px 30px;
+			background: #ffffff;
+			max-width: 100%;
+			&:after {
+				display: none;
+			}
+		}
+	}
+}
+
+.page-footer {
+	.widget {
+		margin-bottom: 50px;
+	}
+	.widget_nav_menu,
+	.insight-core-bmw {
+		li {
+			margin-bottom: 8px;
+			padding: 0;
+			border: 0;
+		}
+	}
+	
+	.widget_recent_entries,
+	.widget_recent_comments,
+	.widget_archive,
+	.widget_categories,
+	.widget_meta,
+	.widget_product_categories,
+	.widget_rss,
+	.widget_pages {
+		> ul {
+			> li {
+				padding: 17px 0 21px;
+				border-color: #333333;
+				&:first-child {
+					padding-top: 0;
+				}
+				&:last-child {
+					border: 0;
+				}
+			}
+		}
+	}
+	
+	.widget_archive,
+	.widget_meta,
+	.widget_pages,
+	.widget_nav_menu,
+	.insight-core-bmw {
+		li {
+			
+			a {
+				padding: 4px 0;
+			}
+		}
+	}
+}
+
+.widget_recent_entries,
+.widget_recent_comments,
+.widget_archive,
+.widget_categories,
+.widget_meta,
+.widget_product_categories,
+.widget_rss,
+.widget_pages,
+.widget_nav_menu,
+.insight-core-bmw {
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		@extend %transit;
+		display: block;
+		margin: 0;
+		padding: 12px 0;
+		border-bottom: 1px solid #f3f3f3;
+		list-style-type: none;
+		
+		&:last-child {
+			margin-bottom: 0;
+		}
+		
+		a {
+			display: block;
+			font-size: inherit;
+			font-family: inherit;
+		}
+	}
+}
+
+.widget_archive,
+.widget_meta,
+.widget_pages,
+.widget_nav_menu,
+.insight-core-bmw {
+	li {
+		padding: 0;
+		
+		a {
+			padding: 12px 0;
+		}
+	}
+}
+
+.widget_pages,
+.widget_nav_menu,
+.insight-core-bmw {
+	ul {
+		ul {
+			> li {
+				border-top: 1px solid #f3f3f3;
+				border-bottom: 0;
+				
+				> a {
+					padding-left: 10px;
+				}
+				
+				ul {
+					> li {
+						> a {
+							padding-left: 20px;
+						}
+					}
+					
+					ul {
+						> li {
+							> a {
+								padding-left: 30px;
+							}
+						}
+						
+						ul {
+							> li {
+								> a {
+									padding-left: 40px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.widget_categories,
+.widget_product_categories {
+	li {
+		margin: 0;
+		padding: 0;
+	}
+	
+	a {
+		display: block;
+		padding: 15px 0;
+		text-transform: uppercase;
+		font-size: 14px;
+		font-weight: 700;
+		letter-spacing: .21em;
+	}
+	
+	.count {
+		float: right;
+		font-size: 12px;
+		font-weight: 700;
+		border-radius: 20px;
+		line-height: 1;
+		color: #ffffff;
+		padding: 5px 11px;
+		letter-spacing: 0;
+	}
+	
+	.children {
+		padding: 0 !important;
+		
+		li {
+			border-top: 1px solid #f3f3f3;
+			border-bottom: 0;
+		}
+		
+		a {
+			padding-left: 30px;
+			color: #cccccc;
+		}
+		
+		.children {
+			a {
+				padding-left: 60px;
+			}
+		}
+	}
+}
+
+.widget_recent_comments {
+	.comment-author-link {
+		position: relative;
+		padding-left: 24px;
+		
+		&:before {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			content: '\f11d';
+			font-family: Ionicons;
+			line-height: 0;
+			transform: translate(0, -50%);
+		}
+	}
+	
+	.recentcomments {
+		a {
+			display: inline !important;
+		}
+	}
+}
+
+.widget_recent_entries {
+	.post-date {
+		display: block;
+		font-size: 14px;
+	}
+}
+
+@include media-breakpoint-down(md) {
+	.page-content {
+		.widget {
+			margin: 0 0 52px;
+		}
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.page-content {
+		.widget {
+			margin: 0 0 32px;
+		}
+	}
+	
+	.page-sidebar {
+		margin-bottom: 50px;
+		.page-sidebar-inner {
+			.page-sidebar-content {
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+}

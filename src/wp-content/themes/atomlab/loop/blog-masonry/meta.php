@@ -1,0 +1,18 @@
+<div class="post-meta">
+	<div class="post-meta-left">
+		<div class="post-author-meta">
+			<span class="ion-ios-person"></span>
+			<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>"><?php the_author(); ?></a>
+		</div>
+	</div>
+	<div class="post-meta-right">
+		<?php if ( function_exists( 'the_views' ) ) : ?>
+			<div class="post-view">
+				<span class="ion-eye"></span>
+				<?php the_views(); ?>
+			</div>
+		<?php endif; ?>
+
+		<?php Atomlab_Templates::post_like(); ?>
+	</div>
+</div>
