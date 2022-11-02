@@ -108,6 +108,8 @@ $table_prefix = getenv_docker('WORDPRESS_TABLE_PREFIX', 'wp_');
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
 define( 'WP_DEBUG', !!getenv_docker('WORDPRESS_DEBUG', '') );
+define('WP_MEMORY_LIMIT', '256M' );
+set_time_limit(600);
 
 /* Add any custom values between this line and the "stop editing" line. */
 
